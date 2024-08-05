@@ -1,0 +1,156 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029_1280.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    background: rgba(0, 0, 0, 0.6); /* Adjust the opacity here */
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #f2fa00;
+    background: #ff0000;
+    padding: 5px;
+    border-radius: 1px;
+}
+
+nav ul {
+    background: #f2fa00;
+    color: #ff0000;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff4500;
+}
+
+.books-list {
+    margin-top: 20px;
+}
+
+.books {
+    list-style: none;
+    padding: 0;
+}
+
+.book-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(236, 3, 3, 0.1);
+    border-radius: 5px;
+}
+
+.book-photo {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-info h2 {
+    margin: 0;
+    color: #000000;
+}
+
+.book-info p {
+    margin: 5px 0;
+    color: #fb0000;
+}
+
+.edit-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background: linear-gradient(45deg, #ff4500, #ffa500);
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+/* Add and Edit Book Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px; /* Increase font size */
+}
+
+form label {
+    font-size: 20px; /* Increase label font size */
+    font-weight: bold; /* Make labels bold */
+    color: #ff0000; /* Change label color */
+    background-color: #f2fa00; /* Optional: add background color */
+    padding: 1px; /* Add padding */
+    border-radius: 1px; /* Add border radius */
+    margin-bottom: 1px;
+}
+
+form input,
+form select,
+form button {
+    padding: 10px;
+    font-size: 18px; /* Increase input font size */
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+    background: linear-gradient(45deg, #ff4500, #ffa500);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(45deg, #ffa500, #ff4500);
+}

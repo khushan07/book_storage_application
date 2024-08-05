@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Storage Application</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Book Storage Application</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/add">Add Book</a></li>
+            </ul>
+        </nav>
+        <div class="books-list">
+            {% if books %}
+                <ul class="books">
+                    {% for book in books %}
+                        <li class="book-item">
+                            <img src="{{ book.photo_url }}" alt="{{ book.title }} cover" class="book-photo">
+                            <div class="book-info">
+                                <h2>{{ book.title }}</h2>
+                                <p>{{ book.year }} by {{ book.author }}</p>
+                                <p>Genre: {{ book.genre }}</p>
+                                <p>Status: {{ book.read_status }}</p>
+                                <a href="{{ url_for('edit_book', title=book.title) }}" class="edit-button">Edit</a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No books in your collection.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
